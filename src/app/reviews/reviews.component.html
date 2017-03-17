@@ -1,0 +1,25 @@
+<p>
+  reviews works!
+</p>
+
+<ul>
+<li *ngFor="let name of names"><br>
+<p *ngFor="let review of reviews">{{name}}<br>{{review }}<br></p>
+</li>
+</ul>
+
+<div class="row"></div>
+<form class="col s12">
+ <h3 class="">Add a Review</h3>
+ <div class="input-field">
+ <label for="name" >Name:</label>
+ <input name="name" #newname >
+ </div>
+ <div class="input-field">
+ <label for="review" >Review:</label>
+ <input name="review" #newreview >
+ </div>
+<button (click)="addReview(newname,newreview)">
+ Submit
+ </button>
+ </form>
